@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "yarn start"
   },
   "homepage": "http://agarzon25.github.io/publicPortfolio",
   "eslintConfig": {
