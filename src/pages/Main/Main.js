@@ -5,9 +5,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
 import Resume from '../Resume';
 import AboutMe from '../AboutMe';
-// import Contact from '../Contact';
 import background from './background.jpg'
 
 function TabContainer(props) {
@@ -31,6 +31,9 @@ const styles = theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
+  bottom: {
+    backgroundColor: 'dimgrey'
+  }
 });
 
 class ScrollableTabsButtonAuto extends React.Component {
@@ -63,6 +66,7 @@ class ScrollableTabsButtonAuto extends React.Component {
         </AppBar>
         {value === 0 && <TabContainer><AboutMe/></TabContainer>}
         {value === 1 && <TabContainer><Resume/></TabContainer>}
+        <BottomNavigation style={styles.bottom}/>
       </div>
     );
   }

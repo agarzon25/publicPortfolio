@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Carousel from '../../components/Carousel'
 import Modal from 'react-responsive-modal';
 import Button from '@material-ui/core/Button';
-import Contact from '../Contact'
+import Contact from '../Contact';
+
 
 export default class AboutMe extends Component {
 
@@ -26,7 +27,9 @@ export default class AboutMe extends Component {
 			flexgrow: 1,
 		},
 		modal: {
-			// width: 100,
+			maxWidth: 100,
+			maxHeight: 100,
+
 		},
 		button: {
 			backgroundColor: 'firebrick',
@@ -48,8 +51,8 @@ export default class AboutMe extends Component {
 	render() {
 		return(
 			<Grid container style={this.styles.root} spacing={8}>
-				<Grid iten xs={3}/>
-				<Grid item xs={6}>
+				<Grid iten xs={1}/>
+				<Grid item xs={10}>
 					<Card style={this.styles.card}>
 						<CardContent>
 							<Button
@@ -66,9 +69,9 @@ export default class AboutMe extends Component {
 						</CardContent>
 					</Card>
 				</Grid>
-				<Grid item xs={3}/>
-				<Grid item xs={3}/>
-				<Grid item xs={6}>
+				<Grid item xs={1}/>
+				<Grid item xs={1}/>
+				<Grid item xs={10}>
 					<Card style={this.styles.card}>
 						<CardContent>
 							<Typography component='p'>
@@ -86,18 +89,19 @@ export default class AboutMe extends Component {
 						</CardContent>
 					</Card>
 				</Grid>
-				<Grid item xs={3}/>
-				<Grid item xs={3}/>
-				<Grid item xs={6}>
+				<Grid item xs={1}/>
+				<Grid item xs={1}/>
+				<Grid item xs={10}>
 					<Contact />
 				</Grid>
-				<Grid item xs={3}/>
-				<Grid item xs={3}/>
-				<Grid item xs={6}>
+				<Grid item xs={1}/>
+				<Grid item xs={1}/>
+				<Grid item xs={10}>
 					<Card style={this.styles.card}>
 						Dog shelter sites
 					</Card>
 				</Grid>
+				<Grid item xs={1}/>
 			</Grid>
 		)
 	}
