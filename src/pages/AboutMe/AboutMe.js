@@ -27,8 +27,7 @@ export default class AboutMe extends Component {
 			flexgrow: 1,
 		},
 		modal: {
-			maxWidth: 100,
-			maxHeight: 100,
+			transform: 'scale(0)'
 
 		},
 		button: {
@@ -63,7 +62,7 @@ export default class AboutMe extends Component {
 							>
 								Check Out My Pictures
 							</Button>
-							<Modal style={this.styles.modal} open={this.state.open} onClose={this.onCloseModal} center>
+							<Modal style={this.styles.modal} open={this.state.open} onClose={this.onCloseModal} focusTrapped>
 								<Carousel/>
 							</Modal>			
 						</CardContent>
@@ -74,9 +73,9 @@ export default class AboutMe extends Component {
 				<Grid item xs={10}>
 					<Card style={this.styles.card}>
 						<CardContent>
-							<Typography component='p'>
+							<Typography>
 								I am motivated Programmer looking for the oppurtunity
-								to become a front-end developer. Currently, I work as 
+								to become a front-end developer. Currently, I work as a
 								Hardware Operations Engineer in New York City. When I'm not
 								working I enjoy watching Stand-Up comedy and anime, playing
 								video games, baseball, football, and improving my apartment. 
@@ -92,14 +91,14 @@ export default class AboutMe extends Component {
 				<Grid item xs={1}/>
 				<Grid item xs={1}/>
 				<Grid item xs={10}>
-					<Contact />
+					<Card style={this.styles.card}>
+						<h1>Contact Me</h1>
+					</Card>
 				</Grid>
 				<Grid item xs={1}/>
 				<Grid item xs={1}/>
 				<Grid item xs={10}>
-					<Card style={this.styles.card}>
-						Dog shelter sites
-					</Card>
+					<Contact />
 				</Grid>
 				<Grid item xs={1}/>
 			</Grid>

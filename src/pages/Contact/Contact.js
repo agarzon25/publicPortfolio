@@ -22,7 +22,7 @@ export default class Contact extends Component {
 		},
 		img: {
 			// height: '100%',
-			width: '100%'
+			width: '50%'
 		}
 	};
 
@@ -38,9 +38,6 @@ export default class Contact extends Component {
 		switch(icon) {
 			case 'github':
 				window.location = 'https://github.com/agarzon25'
-				break;
-			case 'gmail':
-				window.location = {Modal}
 				break;
 			case 'linkedin':
 				window.location = 'https://www.linkedin.com/in/andrew-garzon-869a0843/'
@@ -69,10 +66,18 @@ export default class Contact extends Component {
 					<Card style={this.styles.card}>
 						<CardContent>
 							<img 
+								alt='gmail'
 								style={this.styles.img}
 								src={gmail} 
-								onClick={() => {this.handleClick('gmail')}}
+								onClick={this.onOpenModal}
 							/>
+							<Modal
+								open={this.state.open}
+								onClose={this.onCloseModal}
+								focusTrapped
+							>
+								test
+							</Modal>
 						</CardContent>
 					</Card>
 				</Grid>
@@ -80,6 +85,7 @@ export default class Contact extends Component {
 					<Card style={this.styles.card}>
 						<CardContent>
 							<img
+								alt='linkedin'
 								style={this.styles.img}
 								src={linkedin} 
 								onClick={() => {this.handleClick('linkedin')}}

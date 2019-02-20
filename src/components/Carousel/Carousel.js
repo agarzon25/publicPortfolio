@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Me from './Me.jpg';
@@ -14,7 +13,8 @@ export default class Carousels extends Component {
     styles = {
       img: {
         // height:'15%',
-        // width: '50%'
+        width: '30%',
+        // paddingLeft: 5,
       },
       div: {
         marginTop: 10,
@@ -22,12 +22,15 @@ export default class Carousels extends Component {
       },
       p: {
         color: 'snow'
+      },
+      carousel: {
+        width: 50
       }
     }
 
     render() {
         return (
-            <Carousel>
+            <Carousel focusTrapped center style={this.styles.carousel}>
                 <div style={this.styles.div}>
                     <img style={this.styles.img} alt='Me' src={Me} />
                     <p style={this.styles.p}>Me</p>

@@ -4,44 +4,30 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-const styles = {
-  root: {
-    flexGrow: 1,
-    backgroundColor: 'dimgrey',
-  },
-  div: {
-    textAlign: 'center',
-  },
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-};
+export default class MenuAppBar extends React.Component {
 
-class MenuAppBar extends React.Component {
+  styles = {
+    root: {
+      flexGrow: 1,
+      backgroundColor: 'dimgrey',
+    },
+    div: {
+      textAlign: 'center',
+      margin: '0 auto'
+    },
+  };
 
   render() {
-    const { classes } = this.props;
-
     return (
-      <div className={classes.root}>
-        <AppBar style={styles.root} position="static">
+      <div>
+        <AppBar style={this.styles.root} position="static">
           <Toolbar>
-              <div >
+              <h1 style={this.styles.div}>
                 Welcome to my portfolio!
-              </div>
+              </h1>
           </Toolbar>
         </AppBar>
       </div>
     );
   }
 }
-
-MenuAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(MenuAppBar);
