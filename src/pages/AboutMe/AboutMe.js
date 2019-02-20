@@ -54,17 +54,20 @@ export default class AboutMe extends Component {
 				<Grid item xs={10}>
 					<Card style={this.styles.card}>
 						<CardContent>
-							<Button
+							<Carousel/>
+							{/*<Button
 								style={this.styles.button} 
 								onClick={this.onOpenModal}
 								color='secondary'
 								variant='contained'
 							>
 								Check Out My Pictures
+							\
+
 							</Button>
 							<Modal style={this.styles.modal} open={this.state.open} onClose={this.onCloseModal} focusTrapped>
 								<Carousel/>
-							</Modal>			
+							</Modal>*/}			
 						</CardContent>
 					</Card>
 				</Grid>

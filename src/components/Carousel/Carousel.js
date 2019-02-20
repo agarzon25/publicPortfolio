@@ -13,7 +13,7 @@ export default class Carousels extends Component {
     styles = {
       img: {
         // height:'15%',
-        width: '30%',
+        width: '50%',
         // paddingLeft: 5,
       },
       div: {
