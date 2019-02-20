@@ -15,7 +15,8 @@ export default class AboutMe extends Component {
 		card: {
 			border: '2px solid firebrick',
 			borderRadius: '15px',
-			backgroundColor: 'snow',
+			backgroundColor: 'transparent',
+
 		},
 		image: {
 			height:300,
@@ -32,6 +33,15 @@ export default class AboutMe extends Component {
 		},
 		button: {
 			backgroundColor: 'firebrick',
+		},
+		p: {
+			fontFamily: '"Laila", serif',
+			color: 'snow',
+			fontSize: '18px'
+		},
+		h: {
+			fontFamily: '"Laila", serif',
+			color: 'snow',
 		}
 	};
 
@@ -76,7 +86,7 @@ export default class AboutMe extends Component {
 				<Grid item xs={10}>
 					<Card style={this.styles.card}>
 						<CardContent>
-							<Typography>
+							<Typography style={this.styles.p}>
 								I am motivated Programmer looking for the oppurtunity
 								to become a front-end developer. Currently, I work as a
 								Hardware Operations Engineer in New York City. When I'm not
@@ -95,7 +105,7 @@ export default class AboutMe extends Component {
 				<Grid item xs={1}/>
 				<Grid item xs={10}>
 					<Card style={this.styles.card}>
-						<h1>Contact Me</h1>
+						<h1 style={this.styles.h}>Contact Me</h1>
 					</Card>
 				</Grid>
 				<Grid item xs={1}/>

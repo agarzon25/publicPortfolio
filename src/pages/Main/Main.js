@@ -33,7 +33,7 @@ const styles = theme => ({
   bottom: {
     backgroundColor: 'black',
     textAlign: 'center',
-    padding: '20px',
+    padding: 20,
     position: 'fixed',
     left: '0',
     bottom: '0',

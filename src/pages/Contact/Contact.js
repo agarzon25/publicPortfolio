@@ -18,7 +18,7 @@ export default class Contact extends Component {
 		card: {
 			border: '2px solid firebrick',
 			borderRadius: '15px',
-			backgroundColor: 'snow',
+			backgroundColor: 'transparent',
 		},
 		img: {
 			// height: '100%',

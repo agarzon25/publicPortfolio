@@ -10,8 +10,10 @@ export default class MenuAppBar extends React.Component {
       backgroundColor: 'darkslategrey',
     },
     div: {
+      padding: 15,
       textAlign: 'center',
-      margin: '0 auto'
+      margin: '0 auto',
+      fontFamily: '"Gloria Hallelujah", cursive'
     },
   };
 
@@ -19,11 +21,9 @@ export default class MenuAppBar extends React.Component {
     return (
       <div>
         <AppBar style={this.styles.root} position="static">
-          <Toolbar>
-              <h1 style={this.styles.div}>
-                Welcome to my portfolio!
-              </h1>
-          </Toolbar>
+          <h1 style={this.styles.div}>
+            I am Andrew X. Garzon
+          </h1>
         </AppBar>
       </div>
     );
