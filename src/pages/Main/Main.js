@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
 import Resume from '../Resume';
 import AboutMe from '../AboutMe';
 import background from './background.jpg'
@@ -32,7 +31,14 @@ const styles = theme => ({
     backgroundSize: 'cover',
   },
   bottom: {
-    backgroundColor: 'dimgrey'
+    backgroundColor: 'black',
+    textAlign: 'center',
+    padding: '20px',
+    position: 'fixed',
+    left: '0',
+    bottom: '0',
+    height: '60px',
+    width: '100%',
   }
 });
 
@@ -66,7 +72,7 @@ class ScrollableTabsButtonAuto extends React.Component {
         </AppBar>
         {value === 0 && <TabContainer><AboutMe/></TabContainer>}
         {value === 1 && <TabContainer><Resume/></TabContainer>}
-        <BottomNavigation style={styles.bottom}/>
+        <footer style={styles.bottom}> Andrew Garzon </footer>
       </div>
     );
   }

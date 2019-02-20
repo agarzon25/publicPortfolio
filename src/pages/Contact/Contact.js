@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-// import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-// import Typography from '@material-ui/core/Typography';
 import Modal from 'react-responsive-modal';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 import github from './github.jpg';
 import gmail from './home-gmail-icon.png';
 import linkedin from './linkedin.png';
@@ -76,7 +76,11 @@ export default class Contact extends Component {
 								onClose={this.onCloseModal}
 								focusTrapped
 							>
-								test
+								<MuiThemeProvider> 
+									<TextField label='Name' variant='outlined'/> 
+									<TextField label='Email address' variant='outlined'/>
+									<TextField label='Message' variant='outlined'/>
+								</MuiThemeProvider>	
 							</Modal>
 						</CardContent>
 					</Card>
